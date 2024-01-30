@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import RootPage from './routes/RootPage'
+import ErrorPage from './components/ErrorPage'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <RootPage />,
-    errorElement: 'Error Page',
+    errorElement: <ErrorPage />,
     children: [
       {
         errorElement: 'Children Error Page',
